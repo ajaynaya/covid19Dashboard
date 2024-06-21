@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+COVID-19 Dynamic Dashboard
+Overview
+This project is an interactive and visually appealing dashboard built using React. The dashboard presents COVID-19 statistics, demonstrating skills in React development, including component structure, state management, and UI design.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+Header Section: Displays the title and a brief description of the dashboard’s purpose.
+Data Visualization: Includes a Bar Chart and a Pie Chart to visualize COVID-19 data.
+Interactive Elements: Features a dropdown menu for selecting different countries.
+Responsive Design: The dashboard is fully responsive, working well on both desktop and mobile devices.
+Styling and UX: Custom CSS is used to style the dashboard, ensuring a visually appealing and user-friendly experience.
+Technologies Used
+React: For building the user interface.
+Chart.js: For data visualization.
+Fetch API: For fetching COVID-19 data from a public API.
+CSS: For styling and responsive design.
+Getting Started
+Prerequisites
+Ensure you have the following installed on your local development environment:
 
-## Available Scripts
+Node.js
+npm (Node Package Manager)
+Installation
+Clone the repository:
 
-In the project directory, you can run:
+bash
+Copy code
+git clone https://github.com/yourusername/react-dashboard.git
+cd react-dashboard
+Install the dependencies:
 
-### `npm start`
+bash
+Copy code
+npm install
+Running the Application
+Start the development server:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+bash
+Copy code
+npm start
+Open your browser and navigate to http://localhost:3000 to view the dashboard.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Project Structure
+css
+Copy code
+react-dashboard/
+│
+├── public/
+│
+├── src/
+│   ├── components/
+│   │   ├── BarChart.js
+│   │   ├── CountrySelector.js
+│   │   ├── Dashboard.js
+│   │   ├── Header.js
+│   │   └── PieChart.js
+│   │
+│   ├── App.css
+│   ├── App.js
+│   └── index.js
+│
+├── package.json
+└── README.md
+Components
+Header: Displays the title and description.
+BarChart: Displays a bar chart of COVID-19 cases and deaths.
+PieChart: Displays a pie chart of COVID-19 cases, deaths, and recoveries.
+CountrySelector: Dropdown menu for selecting countries.
+Dashboard: Main component that integrates all other components and fetches data.
+API
+The dashboard fetches data from the disease.sh API:
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Global data: https://disease.sh/v3/covid-19/all
+Country-specific data: https://disease.sh/v3/covid-19/countries/{country}
